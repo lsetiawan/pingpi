@@ -62,11 +62,6 @@ async def upload_file(file: UploadFile):
                 detail=f"{','.join(incorrect_dtypes)} have invalid data types!",
             )
 
-        # Convert timestamps
-        df.loc[:, 'timestamp'] = df['timestamp'].apply(
-            pd.to_datetime, utc=True, unit='s'
-        )
-
         file_id = save_data(df)
 
         return {
