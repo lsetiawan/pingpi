@@ -73,6 +73,7 @@ async def upload_file(file: UploadFile):
             "status": "success",
             "original_filename": file.filename,
             "id": file_id,
+            "message": "Please use the id to access the data again."
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
