@@ -4,7 +4,10 @@ import pandas as pd
 from .validator import header_check, dtype_check
 from .store import setup_storage, clean_storage, save_data, read_data_file
 
-app = FastAPI()
+app = FastAPI(
+    title="pingpi",
+    description="The mini upload and read API for ping csv data.",
+)
 
 
 @app.on_event("startup")
