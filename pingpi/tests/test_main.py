@@ -12,7 +12,7 @@ client = TestClient(app)
 def test_read_main():
     response = client.get("/")
     assert response.status_code == 200
-    assert "FastAPI - Swagger UI" in response.text
+    assert "pingpi - Swagger UI" in response.text
 
 
 def test_upload_file():
