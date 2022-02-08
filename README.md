@@ -17,3 +17,7 @@ Ping API for uploading and reading back the pings.csv given
     ```bash
     uvicorn pingpi.main:app --reload
     ```
+
+## Current deployment
+
+Heroku: https://peaceful-bayou-22452.herokuapp.com/
