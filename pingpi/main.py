@@ -14,8 +14,8 @@ async def startup_event():
 
 
 @app.on_event("shutdown")
-async def startup_event():
-    """Start up to setup file storage"""
+async def shutdown_event():
+    """Shutdown to clean up file storage"""
     clean_storage()
 
 
